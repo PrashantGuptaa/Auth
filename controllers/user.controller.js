@@ -76,6 +76,8 @@ const registerUserController = async (req, res) => {
     await userInstance.save();
     const accessToken = generateAccessToken(dataObj, source);
 
+    log.info("User registerd successfully");
+
     res.status(201).json({
       errorMessage: null,
       success: true,
