@@ -16,6 +16,8 @@ app.use(bodyParser.json());
 app.use(cors());
 app.use('/api/v1', router);
 
+app.get('/', (req, res) => res.status(200).send("Welcome! / Route is working well"))
+
 
 const APP_PORT = process.env.APP_PORT || 8322;
 
