@@ -14,7 +14,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 app.use(cors());
-app.use(router);
+app.use('/api/v1', router);
 
 
 const APP_PORT = process.env.APP_PORT || 8322;
